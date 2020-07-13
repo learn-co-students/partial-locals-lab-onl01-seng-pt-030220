@@ -7,6 +7,6 @@
 
 <ul>
   <% @students.each do |student| %>
-    <li><%= student.name %></li>
+    <%= render partial: "student", locals: { student: student} %>
   <% end %>
 </ul>
