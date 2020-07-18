@@ -34,7 +34,7 @@ students with similar names are returned in the search results.
    `form_for` helper as a local. You'll also need to change the `new.html.erb` and
    `edit.html.erb` views as well.
 
-2. Refactor the `_student.html.erb` partial to pass through each rendered
+2. Refactor the `_student.html.erb` partial7m juuj3 to pass through each rendered
    student as a local.
 
 3. On the classroom show page, iterate through each classroom's students and
