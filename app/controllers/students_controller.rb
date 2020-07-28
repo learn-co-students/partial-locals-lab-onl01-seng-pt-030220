@@ -1,9 +1,11 @@
+
 class StudentsController < ApplicationController
   def new
     @student = Student.new
   end
 
   def create
+    binding.pry
     @student = Student.new(student_params)
     if @student.save
       redirect_to @student
@@ -21,10 +23,13 @@ class StudentsController < ApplicationController
   end
 
   def index
-    @students = Student.all
+    #binding.pry
+    @students = Student.search(params[:query])
   end
 
+  private
+
   def student_params
-    params.require(:student).permit(:name, :birthday, :hometown)
+    params.require(:student).permit(:name, :birthday, :hometown, :query)
   end
 end
