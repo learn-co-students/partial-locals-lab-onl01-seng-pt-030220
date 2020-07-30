@@ -5,7 +5,7 @@
 <% end %>
 
 <ul>
-  <% @students.each do |stud| %>
-    <li><%= render partial: "student", locals: {student: stud} %></li>
+  <% @students.each do |student| %>
+    <li><%= render partial: "student", locals: {student: student} %></li>
   <% end %>
 </ul>
